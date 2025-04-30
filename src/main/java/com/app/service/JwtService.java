@@ -19,7 +19,8 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 
-	private final String secretKey="BS695FBFMgEyRnfvp11VYDJq6uW2MqMtPsO2Z0usNlA=" ;
+	@Value("${jwt.secretkey}")
+	private String secretKey;
 	
 //	public JwtService() throws NoSuchAlgorithmException {
 //		KeyGenerator key = KeyGenerator.getInstance("HmacSHA256");
